@@ -3,14 +3,13 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter);
 
+import main from '../../components/main.vue';
+import finish from '../../components/finish.vue';
+
 const routes = [
-  {name: 'main', path: '/', component: enterId},
-  // {name: 'review', path: '/review', component: leaveReview },
-  // {name: 'contact-form', path: '/get-started', component: contactForm },
-  // {name: 'nps',  path: '/nps', component: npsForm },
-  // {name: 'finish', path: '/thanks', component: finish },
-  // {name: 'terms', path: '/terms-of-use', component: terms },
-  // { path: "*", component: enterId }
+    {name: 'main', path: '/', component: main},
+    {name: 'finish', path: '/finish', component: finish},
+    {path: "*", component: main }
 ];
 
 export default new VueRouter({
