@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import cta_main from '../../components/cta_main.vue';
+import cta_finish from '../../components/cta_finish.vue';
 
 Vue.use(VueRouter);
 
-import main from '../../components/main.vue';
-import finish from '../../components/finish.vue';
-
 const routes = [
-    {name: 'main', path: '/', component: main},
-    {name: 'finish', path: '/finish', component: finish},
-    {path: "*", component: main }
+    {name: 'cta_main', path: '/', component: cta_main},
+    {name: 'cta_finish', path: '/finish', component: cta_finish},
+    {path: "*", component: cta_main }
 ];
 
 export default new VueRouter({

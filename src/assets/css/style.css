@@ -109,6 +109,10 @@ main.thanks-page img{
 .answers input {
 	display: none;
 }
+.answers{
+    user-select: none;
+    outline: none!important;
+}
 .answers input+div {
 	padding: 20px;
 	border: 2px solid red;
@@ -122,6 +126,14 @@ main.thanks-page img{
 	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: 0.05px;
+
+}
+
+.answers input+div:focus,
+.answers input+div:active,
+.answers input+div:hover,
+.answers input+div:focus-within{
+    outline: none!important;
 }
 .answers input:checked+div {
 	background-color: #e95858;
@@ -129,4 +141,45 @@ main.thanks-page img{
 }
 footer {
 	text-align: center;
+}
+
+.slide-top-enter-active {
+	transition: all .3s ease;
+}
+.slide-top-leave-active {
+	transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-top-enter, .slide-top-leave-to
+	/* .slide-fade-leave-active до версии 2.1.8 */ {
+	transform: translateY(-30px);
+	opacity: 0;
+}
+
+
+.slide-bottom-enter-active {
+    transition: all .3s ease;
+}
+.slide-bottom-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-bottom-enter, .slide-bottom-leave-to
+    /* .slide-fade-leave-active до версии 2.1.8 */ {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.slide-x-enter-active {
+    transition: all .5s ease;
+}
+.slide-x-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-x-enter  {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.slide-x-leave-to {
+    transform: translateX(-30px);
+    opacity: 0;
 }
