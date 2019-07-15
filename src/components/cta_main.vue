@@ -33,7 +33,8 @@
         methods: {
             sendAnswer(e){
                 console.log(serialize(e.target.form));
-                axios.post('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/cta/scanCta?'+serialize(e.target.form)+'&ctaId='+sessionStorage.getItem('ctaId'))
+                const apiUrl = 'https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/cta/scanCta?';
+                axios.post(apiUrl+serialize(e.target.form)+'&ctaId='+sessionStorage.getItem('ctaId')+'&lang='+this.$props.lang.lang)
                     .then((resp) => {
                         if(resp.data.success){
                             router.push({name: 'cta_finish'});

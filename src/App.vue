@@ -2,7 +2,7 @@
   <div id="app">
      <cta_header :langs="langs" :current-lang="currentLang" @change-lang="changeLang" :branch-name="branchName" :branch-logo="branchLogo" />
       <router-view :question="question" :answers="answers" :userLang="currentLang" :lang="lang" ></router-view>
-    <cta_footer />
+     <cta_footer />
   </div>
 </template>
 
