@@ -2,7 +2,7 @@
     <transition appear  name="slide-bottom">
         <footer>
             <a href="https://avis.help/">
-                <img src="../assets/img/logo-footer.png">
+                <img src="../assets/img/logo-footer.png" width="120px">
             </a>
         </footer>
     </transition>
