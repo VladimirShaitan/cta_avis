@@ -79,7 +79,23 @@ export default {
                   this.answers = resp.data.message.answer;
               }
 
-          })
+          });
+      // go back button(forward) handler
+
+      window.onpopstate = function() {
+          localStorage.clear();
+          if(document.referrer.indexOf('cta') ){
+              location.href = 'https://go.avis.help/';
+          }
+          // location.href = 'https://go.avis.help/';
+      };
+
+      if(document.referrer.indexOf('go') != -1){
+          location.href = 'https://go.avis.help/';
+      }
+
+
+      // go back button(forward) handler
   }
 
 
